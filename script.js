@@ -1,4 +1,4 @@
-let year = Number(prompt("Рік народження?"))
+let year = (prompt("Рік народження?"))
 let city = (prompt("Місто народження?"))
 let sport = (prompt("Улюблений вид спорту?"))
 
