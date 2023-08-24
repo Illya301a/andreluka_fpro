@@ -13,14 +13,14 @@ console.log(numOrStr)
 
 switch (true) {
     case (numOrStr === null):
-        console.log('ви скасували')
-        break
+        console.log('ви скасували');
+        break;
     case (numOrStr.trim() === ''):
-        console.log('Empty String')
-        break
+        console.log('Empty String');
+        break;
     case isNaN( +numOrStr):
-        console.log(' number is Ba_NaN')
-        break
+        console.log(' number is Ba_NaN');
+        break;
     default:
-        console.log('OK!')
+        console.log('OK!');
 }
