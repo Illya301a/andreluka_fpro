@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+}
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(128, 128, 128);
+}
+img{
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
