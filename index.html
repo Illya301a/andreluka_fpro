@@ -6,6 +6,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="script.js"></script>
+<div class="container">
+    <h2>Форма реєстрації</h2>
+    <form id="registrationForm" onsubmit="return false;">
+        <label for="firstName">Ім'я:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="birthdate">Дата народження:</label>
+        <input type="text" id="birthdate" name="birthdate" required>
+
+        <label>Стать:</label>
+        <input type="radio" id="male" name="gender" value="Чоловік" required>
+        <label for="male">Чоловік</label>
+        <input type="radio" id="female" name="gender" value="Жінка" required>
+        <label for="female">Жінка</label>
+
+        <p><label for="city">Місто:</label></p>
+        <select id="city" name="city">
+            <option value="Київ">Київ</option>
+            <option value="Львів">Львів</option>
+            <option value="Харків">Харків</option>
+            <option value="Одеса" selected>Одеса</option>
+        </select>
+
+        <label for="address">Адреса:</label>
+        <textarea id="address" name="address"></textarea>
+
+        <label>Мови, якими володієте:</label>
+        <input type="checkbox" id="english" name="languages" value="Англійська">
+        <label for="english">Англійська</label>
+        <input type="checkbox" id="spanish" name="languages" value="Іспанська">
+        <label for="spanish">Іспанська</label>
+        <input type="checkbox" id="french" name="languages" value="Французька">
+        <label for="french">Французька</label>
+
+        <p><button id="submit">Зберегти</button></p>
+    </form>
+
+    <div id="userData">
+        <h2>Ваші дані</h2>
+        <table>
+            <tr>
+                <th>Поле</th>
+                <th>Значення</th>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
+<script src="script.js"></script>
 </html>
