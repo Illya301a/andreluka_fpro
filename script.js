@@ -58,8 +58,8 @@ function showSmiles() {
             smileys.splice(index, 1);
             for (let i = 0; i < smileys.length; i++){
                 smileys[i].voteCount = 0
-                showSmiles();
-                updateVotes();
+                showSmiles()
+                updateVotes()
             }
             showSmiles();
             updateVotes();
