@@ -1,0 +1,29 @@
+.main-container {
+    height: 50px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #E6E6FAFF;
+}
+
+.smile-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.vote-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.vote-score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+}
