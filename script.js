@@ -10,7 +10,6 @@ let c = prompt("Введи третій рядок")
 alert("Ваше речення: "+a +" "+b+ " "+c)
 
 // Розбити за цифрами п'ятизначне число і вивести у вихідному порядку через пробіл.
-let number = 23523
-let numberString = number.toString()
-const result = numberString.split('').join(' ');
-console.log(result)
+let number = prompt("Введіть число")
+const result = number.split('').join(' ');
+console.log(result);
