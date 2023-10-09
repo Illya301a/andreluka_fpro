@@ -7,8 +7,8 @@
 // конструктор, який приймає два параметри: імʼя та стать.
 class Person {
     constructor(name, gender) {
-        this.name = name
-        this.gender = gender
+        this.name = name;
+        this.gender = gender;
     }
 }
 
@@ -21,10 +21,10 @@ class Person {
 // додати жителя - метод повинен приймати екземпляр класу Людина, та додавати до масиву жителів.
 class Flat {
     constructor() {
-        this.villagers = []
+        this.villagers = [];
     }
-    addVillagers(person){
-        this.villagers.push(person)
+    addVillager(person) {
+        this.villagers.push(person);
     }
 }
 
@@ -40,16 +40,15 @@ class Flat {
 // в іншому випадку виводить у консоль відповідне повідомлення.
 class House {
     constructor(flatsMax) {
-        this.flats = []
-        this.flatsMax = flatsMax
+        this.flats = [];
+        this.flatsMax = flatsMax;
     }
-    addFlats(){
-        if (this.flats < this.flatsMax){
-            this.flats.push(Flat)
-            console.log("Додан.")
-        }
-        else{
-            console.log("Перевищує максимальна кількість квартир.")
+    addFlat(flat) {
+        if (this.flats.length < this.flatsMax) {
+            this.flats.push(flat);
+            console.log("Додано.");
+        } else {
+            console.log("Перевищує максимальну кількість квартир.");
         }
     }
 }
@@ -57,16 +56,16 @@ class House {
 //В якості демонстраціїї створити:
 //
 // декілька екземплярів класу Людина;
-let person1 = new Person("Svetka", "female")
-let person2 = new Person("Ilushka", "male")
+let person1 = new Person("Svetka", "female");
+let person2 = new Person("Ilushka", "male");
 // декілька екземплярів класу Квартира;
-let flat1 = new Flat()
-let flat2 = new Flat()
+let flat1 = new Flat();
+let flat2 = new Flat();
 // додадити екземпляри класу Людина до екземплярів класу Квартира;
-flat1.addVillagers(person1)
-flat2.addVillagers(person2)
+flat1.addVillager(person1);
+flat2.addVillager(person2);
 // екземпляр класу Будинок;
-let house = new House("2")
+let house = new House("3");
 // додадити екземпляри класу Квартира до екземплярів класу Будинок.
-house.addFlats(flat1)
-house.addFlats(flat2)
+house.addFlat(flat1);
+house.addFlat(flat2);
