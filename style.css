@@ -48,6 +48,9 @@ ul {
     border-radius: 5px;
     width: 200px;
 }
+ul:last-child{
+    width: 300px;
+}
 
 li {
     padding: 10px;
