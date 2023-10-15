@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Інтернет-магазин</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <div class="container">
     <aside>
@@ -87,6 +85,7 @@
     </aside>
 </div>
 
+
 <div id="ordersList" style="display: none;">
     <h1>Мої замовлення</h1>
     <ul id="orders">
@@ -108,6 +107,7 @@
                 <option value="Львів">Львів</option>
                 <option value="Одеса">Одеса</option>
                 <option value="Харків">Харків</option>
+
             </select>
         </div>
         <div class="form-group">
@@ -129,7 +129,12 @@
     </form>
 </div>
 
+<div id="orderDetails" style="display: none;">
+    <h2>Деталі замовлення</h2>
+    <div id="orderProduct"></div>
+    <div id="orderDelivery"></div>
+</div>
+
 <script src="script.js"></script>
 </body>
-
 </html>
