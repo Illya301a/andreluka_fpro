@@ -10,8 +10,8 @@
     <aside>
         <div class="categories">
             <ul>
-                <li onclick="showCategory('category1')"><h3>Іграшки</h3></li>
-                <li onclick="showCategory('category2')"><h3>Їжа</h3></li>
+                <li class="category1"><h3>Іграшки</h3></li>
+                <li class="category2"><h3>Їжа</h3></li>
             </ul>
             <button id="showOrdersButton">Мої замовлення</button>
         </div>
@@ -20,14 +20,14 @@
         <div class="products">
             <div class="products1">
                 <ul>
-                    <li onclick="showProducts('product1')"><h3>Пес Патрон</h3></li>
-                    <li onclick="showProducts('product2')"><h3>Джавелін</h3></li>
+                    <li class="product1"><h3>Пес Патрон</h3></li>
+                    <li class="product2"><h3>Джавелін</h3></li>
                 </ul>
             </div>
             <div class="products2">
                 <ul>
-                    <li onclick="showProducts('product3')"><h3>Кавун</h3></li>
-                    <li onclick="showProducts('product4')"><h3>Чебурек</h3></li>
+                    <li class="product3"><h3>Кавун</h3></li>
+                    <li class="product4"><h3>Чебурек</h3></li>
                 </ul>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <h4>Український собака-винюхувач вибухівки, талісман Державної служби з надзвичайних ситуацій,
                         який здобув велику популярність за часів повномасштабної російсько-української війни.
                         Патрон допоміг виявити понад 90 вибухових пристроїв, встановлених російськими військами.</h4>
-                    <button class="buy" onclick="category(1)">КУПИТИ</button>
+                    <button class="buy buy1">КУПИТИ</button>
                 </div>
             </div>
             <div class="info2">
@@ -53,7 +53,7 @@
                     <h4>Переносний протитанковий ракетний комплекс виробництва американських підприємств Raytheon та
                         Lockheed Martin. Ракета має теплову голівку самонаведення, тому оператор ракетного комплексу не
                         має супроводжувати і коригувати політ ракети після запуску, поки вона наближається до цілі.</h4>
-                    <button class="buy" onclick="category(2)">КУПИТИ</button>
+                    <button class="buy buy2">КУПИТИ</button>
                 </div>
             </div>
             <div class="info3">
@@ -66,7 +66,7 @@
                         Особливості: відвойований хоробрістю <br>
                         Виробник: сміливі українські фермери <br>
                         Картка товару створена виключно як нагадування про необхідність підтримувати ЗСУ.</h4>
-                    <button class="buy" onclick="category(3)">КУПИТИ</button>
+                    <button class="buy buy3">КУПИТИ</button>
                 </div>
             </div>
             <div class="info4">
@@ -78,7 +78,7 @@
                         фаршем всередині. <br>
                         Колір тіста - кремовий, на поверхні - золотистий. <br>
                         Смак - відповідає складовим чебурека. Без чужого присмаку.</h4>
-                    <button class="buy" onclick="category(4)">КУПИТИ</button>
+                    <button class="buy buy4">КУПИТИ</button>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
             <textarea id="comment" name="comment"></textarea><br>
         </div>
         <div class="form-group">
-            <button type="submit" onclick="buyProduct()">Підтвердити замовлення</button>
+            <button type="submit" class="confirm">Підтвердити замовлення</button>
         </div>
         <div class="error-message" id="error"></div>
     </form>
