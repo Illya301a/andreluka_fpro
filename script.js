@@ -68,6 +68,6 @@ function searchPost() {
                 commentsContainer.innerHTML = '';
             });
     } else {
-        alert('Введіть коректний ID поста (1-100).');
+        alert('Введіть коректний ID поста (1-100).')
     }
 }
