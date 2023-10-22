@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Пошук поста за ID</title>
 </head>
 <body>
+<label for="postId">Введіть ID поста (1-100): </label>
+<input type="number" id="postId" min="1" max="100">
+<button onclick="searchPost()">Знайти пост</button>
+<div id="postContainer"></div>
+<div id="commentsContainer"></div>
+
 <script src="script.js"></script>
 </body>
 </html>
