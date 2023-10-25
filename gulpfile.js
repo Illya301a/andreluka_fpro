@@ -1,0 +1,58 @@
+const {src, dest, watch, parallel, series} = require("gulp");
+const scss = require('gulp-sass')(require('sass'));
+const concat = require("gulp-concat");
+const browserSync = require('browser-sync').create()
+const uglify = require('gulp-uglify-es').default;
+const clean = require('gulp-clean');
+
+function convertScss() {
+    return src("app/scss/styles.scss")
+        .pipe(concat("style.min.css"))
+        .pipe(scss({outputStyle: "compressed"}))
+        .pipe(dest("app/css"))
+        .pipe(browserSync.stream())
+}
+
+function convertJS() {
+    return src("app/js/main.js")
+        .pipe(uglify())
+        .pipe(concat("main.min.js"))
+        .pipe(dest("app/js"))
+        .pipe(browserSync.stream())
+}
+
+function watching() {
+    watch(["app/js/main.js"], convertJS)
+    watch(["app/scss/styles.scss"], convertJS)
+    watch(["app/index.html"])
+        .on('change', browserSync.reload);
+}
+
+function browserAutoUpdate() {
+    browserSync.init({
+        server: {
+            baseDir: "app"
+        }
+    });
+}
+
+function clearDist() {
+    return src("dist").pipe(clean())
+}
+
+function createBuild() {
+    return src([
+        "app/css/style.min.css",
+        "app/js/main.min.js",
+        "app/*.html"
+    ], {base: "app"}).pipe(dest("dist"))
+}
+
+exports.convertScss = convertScss;
+exports.convertJS = convertJS;
+exports.watching = watching;
+exports.browserAutoUpdate = browserAutoUpdate;
+exports.createBuild = createBuild;
+exports.build = series(clearDist, createBuild)
+
+exports.default = parallel(convertScss, browserAutoUpdate, watching, convertJS)
