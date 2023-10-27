@@ -1,0 +1,8 @@
+aside{
+    width: 30%;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    align-items: center;
+    font-size: 25px;
+    padding: 20px;
+    font-family: "Baskerville Old Face", ui-sans-serif;
+}

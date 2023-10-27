@@ -1,0 +1,19 @@
+main{
+    width: 60%;
+    background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+    align-items: center;
+    font-size: 25px;
+    padding: 20px;
+    font-family: "Bell MT", sans-serif;
+    position: relative;
+}
+button{
+    width: 125px;
+    height: 75px;
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    border-radius: 20px;
+    border: 0;
+}
