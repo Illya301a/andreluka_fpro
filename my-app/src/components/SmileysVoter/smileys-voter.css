@@ -1,0 +1,41 @@
+.smiley-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.smiley {
+    font-size: 2rem;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.smiley:hover {
+    background-color: #e0e0e0;
+}
+
+.show-results-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.show-results-button:hover {
+    background-color: #0056b3;
+}
+
+.winner-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
