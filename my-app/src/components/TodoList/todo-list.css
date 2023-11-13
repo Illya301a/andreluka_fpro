@@ -1,7 +1,3 @@
-body{
-    background-color: #212121;
-    overflow: hidden;
-}
 .todo-list-container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 400px;

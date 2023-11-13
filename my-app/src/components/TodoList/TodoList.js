@@ -15,7 +15,6 @@ export default class TodoList extends React.Component {
             newTodo: '',
         };
     }
-
     handleTodoToggle = (index) => {
         const updatedTodos = [...this.state.todos];
         updatedTodos[index].completed = !updatedTodos[index].completed;
@@ -23,7 +22,7 @@ export default class TodoList extends React.Component {
     };
 
     handleAddTodo = () => {
-        if (this.state.newTodo.trim() !== '') {
+        if(this.state.newTodo) {
             this.setState({
                 todos: [...this.state.todos, { text: this.state.newTodo, completed: false }],
                 newTodo: '',
@@ -32,8 +31,11 @@ export default class TodoList extends React.Component {
     };
 
 
-    handleDeleteTodo = (index) => { //не работает
-        this.state.todos[index] = {}
+    handleDeleteTodo = (e, itemIndex) => {
+        e.stopPropagation();
+        this.setState({
+            todos: this.state.todos.filter((item, index) => index !== itemIndex)
+        });
     };
 
     handleRefreshPage = () => {
@@ -57,7 +59,7 @@ export default class TodoList extends React.Component {
                     src={refresh}
                     className={`refresh ${this.state.rotating ? 'rotate' : ''}`}
                     alt="refresh"
-                    onClick={this.handleRefreshPage}
+                    onClick={() => this.handleRefreshPage()}
                 />
                 <h1>Todo List</h1>
                 <ul className="todo-list">
@@ -68,7 +70,7 @@ export default class TodoList extends React.Component {
                             onClick={() => this.handleTodoToggle(index)}
                         >
                             {todo.text}
-                            <span className="delete-button" onClick={() => this.handleDeleteTodo(index)}> X </span>
+                            <span className="delete-button" onClick={(e) => this.handleDeleteTodo(e, index)}> X </span>
                         </li>
                     ))}
                 </ul>
@@ -81,7 +83,7 @@ export default class TodoList extends React.Component {
                         placeholder="Add a new todo"
                         className="todo-input"
                     />
-                    <button onClick={this.handleAddTodo} className="add-button">
+                    <button onClick={() => this.handleAddTodo()} className="add-button">
                         Add Todo
                     </button>
                 </div>
