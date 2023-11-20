@@ -4,7 +4,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 export default function FormikForm() {
     const validateEmail = (value) => {
         if (!value) {
-            return 'Поле "Електронна пошта" є обов\'язковим';
+            return `Поле "Електронна пошта" є обов'язковим`;
         } else if (!/\S+@\S+\.\S+/.test(value)) {
             return 'Неправильний формат електронної пошти';
         }
@@ -12,7 +12,7 @@ export default function FormikForm() {
 
     const validatePhone = (value) => {
         if (!value) {
-            return 'Поле "Телефон" є обов\'язковим';
+            return `Поле "Телефон" є обов'язковим`;
         } else if (!/^\d{12}$/.test(value)) {
             return 'Телефон повинен містити лише 12 цифр';
         }
