@@ -1,11 +1,10 @@
 import './App.css';
+import FormikForm from "./Formik/FormikForm";
 
-function App() {
+export default function App() {
   return (
     <>
-
+      <FormikForm />
     </>
   );
 }
-
-export default App;
