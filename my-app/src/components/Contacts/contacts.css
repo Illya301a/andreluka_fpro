@@ -1,0 +1,75 @@
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.contacts-table th, .contacts-table td {
+    border: 1px solid dimgray;
+    padding: 10px;
+    text-align: left;
+}
+
+.button {
+    background-color: dimgray;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+.add-contact-form {
+    background-color: dimgray;
+    padding: 16px;
+    margin: 20px auto;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 268px;
+}
+
+.add-contact-form h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.add-contact-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ddd;
+}

@@ -1,11 +1,10 @@
 import './App.css';
+import Contacts from "./components/Contacts/Contacts";
 
-function App() {
+export default function App() {
   return (
     <>
-
+      <Contacts />
     </>
   );
 }
-
-export default App;
