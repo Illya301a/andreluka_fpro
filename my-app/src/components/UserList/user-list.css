@@ -1,0 +1,22 @@
+.user-list-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-item {
+    margin-bottom: 10px;
+}
+
+.user-list-link {
+    color: #007bff;
+}
+
+.user-list-link:hover {
+    text-decoration: underline;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
